@@ -1,0 +1,23 @@
+.container {
+    padding: 20px;
+    font-size:1rem;
+}
+.content {
+    font-size:2rem;
+    font-style: bold;
+}
+input {
+    margin:5px;
+}
+label {
+    margin:5px;
+}
+button {
+    margin:10px;
+}
+.pause-history {
+    overflow-x: scroll;
+    max-height: 150px;
+    display: grid;
+    margin-top: 25px;
+}

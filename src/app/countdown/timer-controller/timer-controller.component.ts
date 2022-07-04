@@ -2,15 +2,16 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-time-controller',
-  templateUrl: './time-controller.component.html',
-  styleUrls: ['./time-controller.component.scss']
+  templateUrl: './timer-controller.component.html',
+  styleUrls: ['./timer-controller.component.scss']
 })
-export class TimeControllerComponent implements OnInit {
+export class TimerControllerComponent implements OnInit {
   timerLimit:any;
   timerStarted:boolean = false;
   constructor() { }
   @Input() pauseLog:any;
   @Output() startClickEvent: EventEmitter<any> = new EventEmitter();
+  @Output() resetClickEvent: EventEmitter<any> = new EventEmitter();
   ngOnInit() {
   }
   startPauseClick(){
@@ -22,6 +23,6 @@ export class TimeControllerComponent implements OnInit {
     this.timerLimit = null;
   }
   reset(){
-
+    this.resetClickEvent.emit();
   }
 }
