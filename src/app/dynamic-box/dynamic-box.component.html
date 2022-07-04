@@ -1,0 +1,9 @@
+<div class="box-wrapper">
+  <div class="flixible">
+    <div class="box" *ngFor="let item of boxArray; let i=index">
+      <div class="btn-center">
+        <button class="btn btn-danger" (click)="boxButtonClick(i+1)">Click</button>
+      </div>
+    </div>
+  </div>
+</div>

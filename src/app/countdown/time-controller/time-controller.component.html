@@ -1,0 +1,21 @@
+<div class="container">
+  <form>
+    <div class="row">
+      <div>
+        <label for="timerLimit">Enter Timer Limit</label>
+        <input type="number" min="1" [(ngModel)]="timerLimit" name="timerLimit" id="timerLimit">
+      </div>
+    </div>
+    <div class="row">
+      <div class="btn-inline">
+        <button type="button" (click)="startPauseClick()" class="btn btn-danger">Start/Pause</button>
+        <button type="reset" (click)="reset()"  class="btn btn-danger">reset</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="pause-history">
+        <span *ngFor="let log of pauseLog">{{log}}</span>
+      </div>
+    </div>
+  </form>
+</div>

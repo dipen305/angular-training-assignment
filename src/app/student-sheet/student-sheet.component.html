@@ -1,0 +1,22 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th *ngFor="let item of columnHeader" (click)="sort(item)">{{item | titlecase}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of studentData">
+        <th>{{student.rollNo}}</th>
+        <th>{{student.name}}</th>
+        <th>{{student.english}}</th>
+        <th>{{student.mathematics}}</th>
+        <th>{{student.biology}}</th>
+        <th>{{student.chemistry}}</th>
+        <th>{{student.psychology}}</th>
+        <th>{{student.sociology}}</th>
+        <th>{{student.geography}}</th>
+      </tr>
+    </tbody>
+  </table>
+</div>
