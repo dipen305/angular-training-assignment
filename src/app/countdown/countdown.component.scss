@@ -1,0 +1,22 @@
+.container {
+    margin-top: 50px;
+    border: 2px solid black;
+    padding: 20px;
+    min-height: 400px;
+}
+.show-comp-inline{
+    border:2px solid black;
+    margin:5px;
+    width: 49%;
+}
+.comp-border{
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
+.row {
+    justify-content: space-evenly;
+}
+.comp-scroll {
+    overflow-x: scroll;
+    max-height: 500px;
+}

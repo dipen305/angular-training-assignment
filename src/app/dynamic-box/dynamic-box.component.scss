@@ -1,0 +1,22 @@
+.box {
+    width:200px;
+    height:200px;
+    border: 2px solid #eee;
+    margin: 20px;
+}
+.btn-center {
+    vertical-align: middle;
+    top: 40%;
+    text-align: center;
+    position: relative;
+}
+.flixible {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+}
+.box-wrapper {
+    text-align: -webkit-center;
+}
