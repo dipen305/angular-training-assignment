@@ -2,12 +2,12 @@
   <div class="row">
     <div class="col-md-5 comp-border">
       <div>
-        <app-display-timer [timer]="timerLimit"></app-display-timer>
+        <app-display-timer></app-display-timer>
       </div>
     </div>
     <div class="col-md-6 comp-border">
       <div>
-      <app-time-controller [pauseLog]="pauseLog" (startClickEvent)="startTimer($event)" (resetClickEvent)="reset()"></app-time-controller>
+      <app-time-controller [pauseLog]="pauseLog" (startClickEvent)="startTimer($event)"></app-time-controller>
       </div>
     </div>
   </div>

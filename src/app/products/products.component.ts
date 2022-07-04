@@ -17,7 +17,6 @@ export class ProductsComponent implements OnInit {
     this.http.get('./assets/json/product.json').subscribe((result: any) => {
       this.productList = result;
       this.productDefault = [...result];
-      console.log(this.productDefault);
     })
   }
   priceFilter(event:any){
