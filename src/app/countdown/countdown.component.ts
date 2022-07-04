@@ -13,12 +13,12 @@ export class CountdownComponent implements OnInit,OnDestroy {
   pauseLog: string[] = [];
   startCount: number = 0;
   pauseCount: number = 0;
+  errorMessage:string = '';
   constructor(private datePipe: DatePipe) {}
 
   ngOnInit() {}
   startTimer(event: any) {
-    console.log(this.timerLimit);
-    console.log(event.timerLimit);
+    this.errorMessage = '';
     if (
       (this.timerLimit != 0 && this.timerLimit != undefined) ||
       (event.timerLimit != null && event.timerLimit != undefined)
@@ -39,6 +39,8 @@ export class CountdownComponent implements OnInit,OnDestroy {
       } else if (this.timerLimit >= 0 && !event.timerStarted) {
         this.stopInterval("");
       }
+    } else {
+      this.errorMessage = 'Please enter timer limit';
     }
   }
 

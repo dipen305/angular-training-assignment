@@ -1,11 +1,12 @@
 <div class="container">
   <form>
-    <div class="row">
-      <div>
-        <label for="timerLimit">Enter Timer Limit</label>
-        <input type="number" min="1" [(ngModel)]="timerLimit" name="timerLimit" id="timerLimit">
+      <div class="form-group">
+        <label class="control-label" for="timerLimit">Enter Timer Limit:</label>
+        <div>
+          <input type="number" min="1" class="form-control" [(ngModel)]="timerLimit" name="timerLimit" id="timerLimit">
+          <span class="errorMessage">{{this.errorMessage}}</span>
+        </div>
       </div>
-    </div>
     <div class="row">
       <div class="btn-inline">
         <button type="button" (click)="startPauseClick()" class="btn btn-danger">Start/Pause</button>

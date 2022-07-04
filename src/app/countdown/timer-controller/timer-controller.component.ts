@@ -10,6 +10,7 @@ export class TimerControllerComponent implements OnInit {
   timerStarted:boolean = false;
   constructor() { }
   @Input() pauseLog:any;
+  @Input() errorMessage:string = '';
   @Output() startClickEvent: EventEmitter<any> = new EventEmitter();
   @Output() resetClickEvent: EventEmitter<any> = new EventEmitter();
   ngOnInit() {
