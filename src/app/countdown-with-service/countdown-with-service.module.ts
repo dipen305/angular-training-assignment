@@ -7,7 +7,7 @@ import { TimerControllerWithServiceComponent } from './timer-controller/timer-co
 import { ActivityLogComponent } from './activity-log/activity-log.component';
 import { TimerEventCountComponent } from './timer-event-count/timer-event-count.component';
 import { FormsModule } from '@angular/forms';
-import { CountdownService } from './countdown.service';
+import { CountdownService } from '../shared/services/countdown.service';
 
 const routes:Routes = [
   {

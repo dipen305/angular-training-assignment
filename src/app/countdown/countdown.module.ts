@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { CountdownComponent } from './countdown.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DisplayTimerComponent } from './display-timer/display-timer.component';
@@ -26,6 +26,7 @@ const routes:Routes = [
     TimerControllerComponent,
     ActivityLogComponent,
     TimerEventCountComponent
-  ]
+  ],
+  providers:[DatePipe]
 })
 export class CountdownModule { }

@@ -1,5 +1,6 @@
 import { DatePipe } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,7 +18,6 @@ import { CountdownModule } from './countdown/countdown.module';
     BannerModule,
     CountdownModule,
   ],
-  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

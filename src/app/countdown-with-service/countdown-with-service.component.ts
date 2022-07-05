@@ -1,7 +1,7 @@
 import { DatePipe } from '@angular/common';
 import { DomElementSchemaRegistry } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { CountdownService } from './countdown.service';
+import { CountdownService } from '../shared/services/countdown.service';
 
 @Component({
   selector: 'app-countdown-with-service',

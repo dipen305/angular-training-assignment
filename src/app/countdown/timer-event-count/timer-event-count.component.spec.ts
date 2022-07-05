@@ -4,6 +4,8 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { TimerEventCountComponent } from './timer-event-count.component';
+import { DatePipe } from '@angular/common';
+import { CountdownService } from 'src/app/shared/services/countdown.service';
 
 describe('TimerEventCountComponent', () => {
   let component: TimerEventCountComponent;
@@ -11,7 +13,8 @@ describe('TimerEventCountComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TimerEventCountComponent ]
+      declarations: [ TimerEventCountComponent ],
+      providers:[DatePipe,CountdownService]
     })
     .compileComponents();
   }));

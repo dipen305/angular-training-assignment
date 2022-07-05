@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { DisplayTimerComponent } from './display-timer.component';
+import { DatePipe } from '@angular/common';
 
 describe('DisplayTimerComponent', () => {
   let component: DisplayTimerComponent;
@@ -11,7 +12,8 @@ describe('DisplayTimerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DisplayTimerComponent ]
+      declarations: [ DisplayTimerComponent ],
+      providers:[DatePipe]
     })
     .compileComponents();
   }));
