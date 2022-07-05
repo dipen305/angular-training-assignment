@@ -1,7 +1,8 @@
 /* tslint:disable:no-unused-variable */
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 import { FormsModule } from "@angular/forms";
+import { mockProductsData } from "../testing/mockData";
 import { ProductsComponent } from "./products.component";
 
 describe("ProductsComponent", () => {
@@ -10,8 +11,9 @@ describe("ProductsComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientModule],
       declarations: [ProductsComponent],
-      providers:[HttpClient]
+      providers: [HttpClient],
     }).compileComponents();
   }));
 
@@ -25,4 +27,19 @@ describe("ProductsComponent", () => {
     expect(component).toBeTruthy();
   });
 
+  it("priceFilter() => should filter data", () => {
+    let mockEvent = {
+      target: {
+        value: 5000,
+      },
+    };
+    let dataAfterFilter;
+    component.productList = mockProductsData;
+    component.productDefault = [...component.productList];
+    dataAfterFilter = component.productList.filter(
+      (element) => element.Price > mockEvent.target.value
+    );
+    component.priceFilter(mockEvent);
+    expect(component.productList.length).toEqual(dataAfterFilter.length);
+  });
 });

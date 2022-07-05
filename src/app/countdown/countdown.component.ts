@@ -34,9 +34,9 @@ export class CountdownComponent implements OnInit,OnDestroy {
         this.startCount = 0;
         this.pauseCount = 0;
         this.startInterval("reset");
-      } else if (this.timerLimit >= 0 && event.startTimer) {
+      } else if (this.timerLimit >= 0 && event.isTimerRunning) {
         this.startInterval("");
-      } else if (this.timerLimit >= 0 && !event.timerStarted) {
+      } else if (this.timerLimit >= 0 && !event.isTimerRunning) {
         this.stopInterval("");
       }
     } else {

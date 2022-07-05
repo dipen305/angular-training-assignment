@@ -29,7 +29,7 @@ describe("TimeControllerComponent", () => {
   it("startPauseClick() should start the timer if value is > 0", () => {
     component.timerLimit = 100;
     component.startPauseClick();
-    expect(component.timerStarted).toBeTruthy();
+    expect(component.isTimerRunning).toBeTruthy();
   });
 
   it("startPauseClick() should pause the timer if value is blank ", () => {
