@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class TimerControllerComponent implements OnInit {
   timerLimit:any;
-  timerStarted:boolean = false;
+  isTimerRunning:boolean = false;
   constructor() { }
   @Input() pauseLog:any;
   @Input() errorMessage:string = '';
@@ -17,10 +17,10 @@ export class TimerControllerComponent implements OnInit {
   }
   startPauseClick(){
     if(this.timerLimit>0)
-      this.timerStarted = true;
+      this.isTimerRunning = true;
     else
-      this.timerStarted = ! this.timerStarted;
-    this.startClickEvent.emit({timerLimit:this.timerLimit,startTimer:this.timerStarted});
+      this.isTimerRunning = ! this.isTimerRunning;
+    this.startClickEvent.emit({timerLimit:this.timerLimit,isTimerRunning:this.isTimerRunning});
     this.timerLimit = null;
   }
   reset(){

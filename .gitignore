@@ -1,2 +1,12 @@
-node_modules
+# Ignore file mac users
+.DS_store
+
+# Ignore file mac users
+
 .angular
+
+# Ignore Node Modules
+node_modules
+
+# Ignore test-related files
+coverage
