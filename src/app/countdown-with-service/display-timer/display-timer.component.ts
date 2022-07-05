@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CountdownService } from '../countdown.service';
+import { CountdownService } from '../../shared/services/countdown.service';
 
 @Component({
   selector: 'app-display-timer',

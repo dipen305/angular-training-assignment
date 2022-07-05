@@ -7,7 +7,7 @@ import {
   OnInit,
   Output,
 } from "@angular/core";
-import { CountdownService } from "../countdown.service";
+import { CountdownService } from "../../shared/services/countdown.service";
 
 @Component({
   selector: "app-timer-controller-with-service",

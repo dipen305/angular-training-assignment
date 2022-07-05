@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { ActivityLogComponent } from './activity-log.component';
+import { DatePipe } from '@angular/common';
 
 describe('ActivityLogComponent', () => {
   let component: ActivityLogComponent;
@@ -11,7 +12,8 @@ describe('ActivityLogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ActivityLogComponent ]
+      declarations: [ ActivityLogComponent ],
+      providers: [DatePipe]
     })
     .compileComponents();
   }));
