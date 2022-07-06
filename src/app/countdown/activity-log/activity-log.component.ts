@@ -1,15 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
-
+import { Component, Input } from "@angular/core";
 @Component({
-  selector: 'app-activity-log',
-  templateUrl: './activity-log.component.html',
-  styleUrls: ['./activity-log.component.scss']
+  selector: "app-activity-log",
+  templateUrl: "./activity-log.component.html",
+  styleUrls: ["./activity-log.component.scss"],
 })
-export class ActivityLogComponent implements OnInit {
-@Input() startStopLog:any;
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class ActivityLogComponent {
+  @Input() startStopLog: any;
 }

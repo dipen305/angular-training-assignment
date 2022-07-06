@@ -1,8 +1,6 @@
 /* tslint:disable:no-unused-variable */
 import { HttpClient, HttpClientModule } from "@angular/common/http";
-import { COMPILER_OPTIONS } from "@angular/core";
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { FormsModule } from "@angular/forms";
+import { waitForAsync, ComponentFixture, TestBed } from "@angular/core/testing";
 import { mockStudentsData } from "../testing/mockData";
 import { StudentSheetComponent } from "./student-sheet.component";
 
@@ -10,7 +8,7 @@ describe("StudentSheetComponent", () => {
   let component: StudentSheetComponent;
   let fixture: ComponentFixture<StudentSheetComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientModule],
       declarations: [StudentSheetComponent],
@@ -57,13 +55,5 @@ describe("StudentSheetComponent", () => {
       return obj.key == "english";
     }).order;
     expect(order).toEqual("default");
-  });
-
-  it("sortData() => should sort the data", () => {
-    let order;
-    component.studentData = mockStudentsData;
-    
-    
-    // expect(order).toEqual("default");
   });
 });

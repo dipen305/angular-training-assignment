@@ -1,6 +1,5 @@
 import { DatePipe } from '@angular/common';
-import { DomElementSchemaRegistry } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CountdownService } from '../shared/services/countdown.service';
 
 @Component({
@@ -8,9 +7,6 @@ import { CountdownService } from '../shared/services/countdown.service';
   templateUrl: './countdown-with-service.component.html',
   styleUrls: ['./countdown-with-service.component.scss']
 })
-export class CountdownWithServiceComponent implements OnInit {
+export class CountdownWithServiceComponent {
   constructor(private countDownService:CountdownService, private datePipe:DatePipe) { }
-
-  ngOnInit() {
-  }
 }

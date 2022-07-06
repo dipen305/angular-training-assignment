@@ -1,15 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
 @Component({
-  selector: 'app-display-timer',
-  templateUrl: './display-timer.component.html',
-  styleUrls: ['./display-timer.component.scss']
+  selector: "app-display-timer",
+  templateUrl: "./display-timer.component.html",
+  styleUrls: ["./display-timer.component.scss"],
 })
-export class DisplayTimerComponent implements OnInit {
-@Input() timer:number = 0;
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class DisplayTimerComponent {
+  @Input() timer: number = 0;
 }

@@ -1,5 +1,5 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DatePipe } from '@angular/common';
 import { CountdownWithServiceComponent } from './countdown-with-service.component';
 import { TimerEventCountComponent } from './timer-event-count/timer-event-count.component';
@@ -12,7 +12,7 @@ describe('CountdownWithServiceComponent', () => {
   let component: CountdownWithServiceComponent;
   let fixture: ComponentFixture<CountdownWithServiceComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports:[FormsModule],
       declarations: [

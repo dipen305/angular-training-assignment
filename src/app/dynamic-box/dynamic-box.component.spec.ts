@@ -1,14 +1,12 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { FormsModule } from "@angular/forms";
-import { By } from "@angular/platform-browser";
+import { waitForAsync, ComponentFixture, TestBed } from "@angular/core/testing";
 import { DynamicBoxComponent } from "./dynamic-box.component";
 
 describe("DynamicBoxComponent", () => {
   let component: DynamicBoxComponent;
   let fixture: ComponentFixture<DynamicBoxComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [DynamicBoxComponent],
     }).compileComponents();

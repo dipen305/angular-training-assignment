@@ -1,7 +1,7 @@
 /* tslint:disable:no-unused-variable */
 
 import { DatePipe } from '@angular/common';
-import { TestBed, async, inject } from '@angular/core/testing';
+import { TestBed, inject } from '@angular/core/testing';
 import { CountdownService } from './countdown.service';
 
 describe('Service: Countdown', () => {

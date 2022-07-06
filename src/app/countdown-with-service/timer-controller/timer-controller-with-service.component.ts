@@ -1,14 +1,5 @@
-import { DatePipe } from "@angular/common";
-import {
-  Component,
-  EventEmitter,
-  Input,
-  OnDestroy,
-  OnInit,
-  Output,
-} from "@angular/core";
+import {Component, OnDestroy } from "@angular/core";
 import { CountdownService } from "../../shared/services/countdown.service";
-
 @Component({
   selector: "app-timer-controller-with-service",
   templateUrl: "./timer-controller-with-service.component.html",

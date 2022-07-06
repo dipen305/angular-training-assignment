@@ -1,8 +1,5 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { ActivityLogComponent } from './activity-log.component';
 import { DatePipe } from '@angular/common';
 
@@ -10,7 +7,7 @@ describe('ActivityLogComponent', () => {
   let component: ActivityLogComponent;
   let fixture: ComponentFixture<ActivityLogComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ActivityLogComponent ],
       providers: [DatePipe]

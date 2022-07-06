@@ -1,7 +1,5 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DisplayTimerComponent } from './display-timer.component';
 import { DatePipe } from '@angular/common';
@@ -10,7 +8,7 @@ describe('DisplayTimerComponent', () => {
   let component: DisplayTimerComponent;
   let fixture: ComponentFixture<DisplayTimerComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ DisplayTimerComponent ],
       providers:[DatePipe]

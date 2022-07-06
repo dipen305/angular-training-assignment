@@ -1,8 +1,5 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { TimerControllerWithServiceComponent } from './timer-controller-with-service.component';
 import { CountdownService } from '../../shared/services/countdown.service';
 import { DatePipe } from '@angular/common';
@@ -13,7 +10,7 @@ describe('TimeControllerWithServiceComponent', () => {
   let fixture: ComponentFixture<TimerControllerWithServiceComponent>;
   let countDownService:jasmine.SpyObj<CountdownService>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     countDownService = jasmine.createSpyObj('CountdownService', ['reset','timerHandler'])
     TestBed.configureTestingModule({
       imports:[FormsModule],

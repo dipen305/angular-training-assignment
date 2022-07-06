@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CountdownService } from '../../shared/services/countdown.service';
 
 @Component({
@@ -6,11 +6,7 @@ import { CountdownService } from '../../shared/services/countdown.service';
   templateUrl: './display-timer.component.html',
   styleUrls: ['./display-timer.component.scss']
 })
-export class DisplayTimerComponent implements OnInit {
+export class DisplayTimerComponent {
   currentTimer:number = 0;
   constructor(public countDownService:CountdownService) { }
-
-  ngOnInit() {
-  }
-
 }

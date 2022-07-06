@@ -1,7 +1,6 @@
 /* tslint:disable:no-unused-variable */
 import { HttpClient, HttpClientModule } from "@angular/common/http";
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { FormsModule } from "@angular/forms";
+import { waitForAsync, ComponentFixture, TestBed } from "@angular/core/testing";
 import { mockProductsData } from "../testing/mockData";
 import { ProductsComponent } from "./products.component";
 
@@ -9,7 +8,7 @@ describe("ProductsComponent", () => {
   let component: ProductsComponent;
   let fixture: ComponentFixture<ProductsComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientModule],
       declarations: [ProductsComponent],

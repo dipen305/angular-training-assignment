@@ -1,12 +1,12 @@
 import { DatePipe } from "@angular/common";
-import { Component, OnDestroy, OnInit } from "@angular/core";
+import { Component, OnDestroy } from "@angular/core";
 
 @Component({
   selector: "app-countdown",
   templateUrl: "./countdown.component.html",
   styleUrls: ["./countdown.component.scss"],
 })
-export class CountdownComponent implements OnInit,OnDestroy {
+export class CountdownComponent implements OnDestroy {
   timerLimit: number = 0;
   interval: any;
   startStopLog: string[] = [];
@@ -16,7 +16,6 @@ export class CountdownComponent implements OnInit,OnDestroy {
   errorMessage:string = '';
   constructor(private datePipe: DatePipe) {}
 
-  ngOnInit() {}
   startTimer(event: any) {
     this.errorMessage = '';
     if (

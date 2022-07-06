@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { CountdownService } from "../../shared/services/countdown.service";
 
 @Component({
@@ -6,8 +6,6 @@ import { CountdownService } from "../../shared/services/countdown.service";
   templateUrl: "./activity-log.component.html",
   styleUrls: ["./activity-log.component.scss"],
 })
-export class ActivityLogComponent implements OnInit {
+export class ActivityLogComponent {
   constructor(public countDownService: CountdownService) {}
-
-  ngOnInit() {}
 }

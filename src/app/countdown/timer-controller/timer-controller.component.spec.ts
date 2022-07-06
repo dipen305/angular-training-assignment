@@ -1,5 +1,5 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { waitForAsync, ComponentFixture, TestBed } from "@angular/core/testing";
 import { TimerControllerComponent } from "./timer-controller.component";
 import { FormsModule } from "@angular/forms";
 import { DatePipe } from "@angular/common";
@@ -8,7 +8,7 @@ describe("TimeControllerComponent", () => {
   let component: TimerControllerComponent;
   let fixture: ComponentFixture<TimerControllerComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [FormsModule],
       declarations: [TimerControllerComponent],
