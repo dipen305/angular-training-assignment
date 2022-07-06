@@ -31,16 +31,16 @@ export class CountdownService {
         this.currentTimer = timerLimit;
         this.startTimer("");
       } else if (timerLimit != null) {
-        currentTimer = timerLimit;
+        this.currentTimer = timerLimit;
         this.stopTimer("reset");
         this.startStopLog = [];
         this.pauseLog = [];
         this.startCount = 0;
         this.pauseCount = 0;
         this.startTimer("reset");
-      } else if (currentTimer >= 0 && this.timerStarted) {
+      } else if (this.currentTimer >= 0 && this.timerStarted) {
         this.startTimer("");
-      } else if (currentTimer >= 0 && !this.timerStarted) {
+      } else if (this.currentTimer >= 0 && !this.timerStarted) {
         this.stopTimer("");
       }
     } else {
@@ -61,8 +61,6 @@ export class CountdownService {
     );
     this.interval = setInterval(() => {
       this.currentTimer--;
-      // this.currentTimer = this.currentTimer;
-
       if (this.currentTimer <= 0) {
         this.stopTimer("finish");
       }
