@@ -1,4 +1,3 @@
-/* tslint:disable:no-unused-variable */
 import { waitForAsync, ComponentFixture, TestBed } from "@angular/core/testing";
 import { DynamicBoxComponent } from "./dynamic-box.component";
 
