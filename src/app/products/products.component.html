@@ -1,6 +1,6 @@
 <div class="product-container container">
   <nav class="navbar navbar-dark bg-primary justify-content-end pe-3">
-    <div class="btn-group" role="group" aria-label="Basic example">
+    <div class="btn-group" role="group" aria-label="navigation menu">
       <button type="button" value="gridView" class="btn btn-danger" (click)="isGrid = true" [ngClass]="{active:isGrid}">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -40,9 +40,9 @@
       <option value="9000">More then 9000</option>
     </select>
   </nav>
-  <div class="product-wrapper" [ngClass]="{list:!isGrid}">
+  <div class="product-wrapper" tabindex="0" aria-label="List of products" [ngClass]="{list:!isGrid}">
     <div class="product-box" *ngFor="let product of productList; let i = index">
-      <div class="card product">
+      <div class="card product"  tabindex="0" [attr.aria-label]="product.Id + ': product description : ' + product.Title + ': Price : ' + product.Price">
         <div class="img-wrapper">
           <img
             [src]="product.img"
@@ -52,8 +52,8 @@
           />
         </div>
         <div class="card-body">
-          <h5 class="card-title">{{ product.Title }}</h5>
-          <p class="card-text">Price : {{ product.Price }}</p>
+          <p class="card-title">{{ product.Title }}</p>
+          <p class="card-text"> Price : {{ product.Price }}</p>
         </div>
       </div>
     </div>
