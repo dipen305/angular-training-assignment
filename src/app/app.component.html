@@ -1,14 +1,19 @@
 
 
-<nav class="top-nav">
-  <ul>
-    <li> <a routerLinkActive="active" routerLink="banner">Banner</a></li>
-    <li> <a routerLinkActive="active" routerLink="products">Products</a></li>
-    <li> <a routerLinkActive="active" routerLink="countdown">Countdown</a></li>
-    <li> <a routerLinkActive="active" routerLink="countdown-with-service">Countdown With Service</a></li>
-    <li> <a routerLinkActive="active" routerLink="student-sheet">Student Sheets</a></li>
-    <li> <a routerLinkActive="active" routerLink="dynamic-box">Dynamic Box</a></li>
+<nav class="navbar navbar-expand-lg navbar-dark top-nav">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="navToggle()" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" [ngClass]="{'show':show==true}" id="navbarText">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item"> <a routerLinkActive="active" routerLink="banner">Banner</a></li>
+    <li class="nav-item"> <a routerLinkActive="active" routerLink="products">Products</a></li>
+    <li class="nav-item"> <a routerLinkActive="active" routerLink="countdown">Countdown</a></li>
+    <li class="nav-item"> <a routerLinkActive="active" routerLink="countdown-with-service">Countdown With Service</a></li>
+    <li class="nav-item"> <a routerLinkActive="active" routerLink="student-sheet">Student Sheets</a></li>
+    <li class="nav-item"> <a routerLinkActive="active" routerLink="dynamic-box">Dynamic Box</a></li>
   </ul>
+  </div>
 </nav>
 
 <router-outlet></router-outlet>

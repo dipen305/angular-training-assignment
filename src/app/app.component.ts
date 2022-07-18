@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  show:boolean = true;
   title = 'Assignment';
+  navToggle(){
+    this.show = !this.show;
+  }
 }

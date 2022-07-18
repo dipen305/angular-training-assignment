@@ -2,20 +2,20 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th *ngFor="let item of columnHeader" (click)="sort(item)">{{item | titlecase}}</th>
+        <th scope="col" *ngFor="let item of columnHeader" (click)="sort(item)">{{item | titlecase}}</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let student of studentData">
-        <th>{{student.rollNo}}</th>
-        <th>{{student.name}}</th>
-        <th>{{student.english}}</th>
-        <th>{{student.mathematics}}</th>
-        <th>{{student.biology}}</th>
-        <th>{{student.chemistry}}</th>
-        <th>{{student.psychology}}</th>
-        <th>{{student.sociology}}</th>
-        <th>{{student.geography}}</th>
+        <th scope="row">{{student.rollNo}}</th>
+        <td>{{student.name}}</td>
+        <td>{{student.english}}</td>
+        <td>{{student.mathematics}}</td>
+        <td>{{student.biology}}</td>
+        <td>{{student.chemistry}}</td>
+        <td>{{student.psychology}}</td>
+        <td>{{student.sociology}}</td>
+        <td>{{student.geography}}</td>
       </tr>
     </tbody>
   </table>
